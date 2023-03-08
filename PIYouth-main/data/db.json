@@ -1,0 +1,84 @@
+{
+  "cds":[
+      {   
+         "id":1,
+          "methode":" La pilule",
+          "image": "https://images.unsplash.com/photo-1536064479547-7ee40b74b807?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+      },
+      {
+         "id":2,
+         "methode":" Les injections ",
+         "image" : "https://images.unsplash.com/photo-1609945168638-5465dc07f1be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80"
+     },
+     {
+         "id":3,
+         "methode":"Le sterilet",
+         "image":"https://images.unsplash.com/photo-1504813184591-01572f98c85f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+     }
+     
+
+  ],
+  "services":[
+    {   
+       "id":1,
+       "name" : "Cds A",
+        "Location":"Bujumbura",
+        "ouverture" : "8:00 - 17: 00",
+        "contact": "3884992020",
+        "Services": " "
+    },
+    {   
+        "id":2,
+        "name" : "Cds B",
+         "Location":"Bujumbura",
+         "ouverture" : "8:00 - 17: 00",
+         "contact": "3884992020",
+         "Services": " "
+     },
+ 
+     {   
+        "id":3,
+        "name" : "Cds C",
+         "Location":"Bujumbura",
+         "ouverture" : "8:00 - 17: 00",
+         "contact": "3884992020",
+         "Services": " "
+     },
+     {   
+        "id":4,
+        "name" : "Cds D",
+         "Location":"Bujumbura",
+         "ouverture" : "8:00 - 17: 00",
+         "contact": "3884992020",
+         "Services": " "
+     },
+     {   
+        "id":5,
+        "name" : "Cds E",
+         "Location":"MWaro",
+         "ouverture" : "8:00 - 17: 00",
+         "contact": "3884992020",
+         "Services": " "
+     },
+     {   
+        "id":6,
+        "name" : "Cds E",
+         "Location":"Muyinga",
+         "ouverture" : "8:00 - 17: 00",
+         "contact": "3884992020",
+         "Services": " "
+     },
+     {   
+        "id":6,
+        "name" : "Cds E",
+         "Location":"Muramvya",
+         "ouverture" : "8:00 - 17: 00",
+         "contact": "3884992020",
+         "Services": " "
+     }
+   
+
+]
+
+
+}

@@ -1,0 +1,21 @@
+{
+  "methodes":[
+    {
+        "id" : "1",
+        "methodeName":"Preservatif",
+        "methodeUrl":"preservatif.png"
+    },
+    {
+        "id" : "2",
+        "methodeName":"Diaphragme",
+        "methodeUrl":"diaphragme.png"
+    },
+    {
+        "id" : "3",
+        "methodeName":"Injections",
+        "methodeUrl":"Injections.png"
+
+    }
+  ]
+
+}

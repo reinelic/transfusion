@@ -1,0 +1,33 @@
+.activities {
+  /* background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(35, 171, 142, 1) 0%,
+    rgba(134, 166, 209, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+
+  background-color: #e6e7f2;
+}
+
+/* .img_act {
+  height: 400px;
+} */
+
+.act-info {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 30%;
+  height: 400px;
+}
+
+@media only screen and (max-width: 800px) {
+  .act-info {
+    position: static;
+  }
+  .img_act {
+    width: 100%;
+  }
+}

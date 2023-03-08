@@ -1,0 +1,97 @@
+.home {
+  /* background-image:url('/public/pattern.jpg'); */
+  background: url('/public/pattern.jpg');
+  background-blend-mode: lighten;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  overflow: hidden;
+}
+.home_1 {
+  height: 600px;
+  width: 60%;
+  /* overflow:hidden ; */
+}
+.home_2 {
+  background-color: #2b3169;
+}
+
+img {
+  /*     
+    width: auto;
+    height: auto; */
+  object-fit: cover;
+  z-index: 1;
+}
+
+.man {
+  width: 40%;
+  overflow: clip;
+}
+
+.girl {
+  width: 866;
+  height: 1119px;
+  position: relative;
+  left: 300px;
+  background-color: rgb(108, 91, 124);
+}
+
+.home_info {
+  position: absolute;
+  font-size: 40px;
+  width: 500px;
+  padding: 10px;
+  top: 90%;
+  left: 10%;
+  background-color: rgb(122, 77, 77);
+  color: white;
+  z-index: 1;
+}
+.methodes {
+  height: 1500px;
+  color: aliceblue;
+}
+
+.pattern-component {
+  width: 45%;
+  height: 40%;
+  background-image: ;
+}
+
+.form-info {
+  background-image: url('/public/pattern.jpg');
+  background-size: cover;
+}
+
+.component {
+  width: 50%;
+  height: 50%;
+}
+
+.icone {
+  width: 50%;
+  height: 50%;
+}
+.activities .row {
+  height: 500px;
+}
+
+.img_act {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+a:link {
+  text-decoration: none;
+  color: rgb(75, 96, 100);
+  font-size: 14px;
+}
+
+a:active {
+  background-color: rgb(225, 18, 139);
+}
+
+@media only screen and (min-width: 1200px) {
+}

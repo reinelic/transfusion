@@ -1,0 +1,98 @@
+{
+    "cds":[
+        {   
+           "id":1,
+           "name" : "Cds A",
+            "Location":"Bujumbura",
+            "ouverture" : "8:00 - 17: 00",
+            "contact": "3884992020",
+            "Services": " "
+        },
+        {   
+            "id":2,
+            "name" : "Cds B",
+             "Location":"Bujumbura",
+             "ouverture" : "8:00 - 17: 00",
+             "contact": "3884992020",
+             "Services": " "
+         },
+     
+         {   
+            "id":3,
+            "name" : "Cds C",
+             "Location":"Bujumbura",
+             "ouverture" : "8:00 - 17: 00",
+             "contact": "3884992020",
+             "Services": " "
+         },
+         {   
+            "id":4,
+            "name" : "Cds D",
+             "Location":"Bujumbura",
+             "ouverture" : "8:00 - 17: 00",
+             "contact": "3884992020",
+             "Services": " "
+         },
+         {   
+            "id":5,
+            "name" : "Cds E",
+             "Location":"Bujumbura",
+             "ouverture" : "8:00 - 17: 00",
+             "contact": "3884992020",
+             "Services": " "
+         },
+         {   
+            "id":5,
+            "name" : "Cds E",
+             "Location":"Mwaro",
+             "ouverture" : "8:00 - 17: 00",
+             "contact": "3884992020",
+             "Services": " "
+         }
+       
+  
+    ],
+    "methodes":[
+        {
+            "id" : 1,
+            "methodeName":"Preservatif",
+            "methodeUrl":"preservatif.png",
+            "video":"https://www.youtube.com/embed/t4zzwOGTsMk?autoplay=1&mute=1"
+        },
+        {
+            "id" : 2,
+            "methodeName":"Diaphragme",
+            "methodeUrl":"diaphragme.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+        },
+        {
+            "id" : 3,
+            "methodeName":"Injections",
+            "methodeUrl":"Injections.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+    
+        },
+        {
+            "id" : 4,
+            "methodeName":"Anneau",
+            "methodeUrl":"Anneau.png",
+            "video":"https://www.youtube.com/embed/t4zzwOGTsMk?autoplay=1&mute=1"
+    
+        },
+        {
+            "id" : 5,
+            "methodeName":"Idu",
+            "methodeUrl":"Idu.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+    
+        },
+        {
+            "id" : 6,
+            "methodeName":"Sayana",
+            "methodeUrl":"Sayana.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+    
+        }
+      ]
+  
+  }

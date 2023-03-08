@@ -1,0 +1,23 @@
+/* :root {
+  --clr-primary: ;
+} */
+
+html body {
+  font-style: 62.5%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,35 @@
+$mainColor: #03697d;
+$accentColor: rgba(36, 37, 37, 0.158);
+// $accentDanger :rgba(16, 74, 82, 0.548);
+$accentDanger: #3765ea;
+$secondAccent: #f94a5f;
+$thirdAccent: #05e2b7;
+
+$primary: $mainColor;
+$secondary: $accentColor;
+$info: $secondAccent;
+$danger: $accentDanger;
+
+$spacer: 2rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+) !default;
+
+$position-values: (
+  0: 0,
+  20: 20%,
+  30: 30%,
+  50: 50%,
+  60: 60%,
+  75: 75%,
+  80: 80%,
+  100: 100%,
+);
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
