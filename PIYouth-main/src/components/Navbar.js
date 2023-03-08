@@ -65,7 +65,7 @@ const Navbar = () => {
                 <Link to='private/CdsList'>
                   {' '}
                   <span className='text-danger mx-2'>
-                    CDS-Amis de jeunes
+                    Hopitaux/Centre de transfusion
                   </span>{' '}
                 </Link>
               </div>
@@ -73,7 +73,9 @@ const Navbar = () => {
               <div className='nav-item'>
                 <Link to='private/newCDS'>
                   {' '}
-                  <span className='text-danger mx-2'>Ajouter CDS</span>{' '}
+                  <span className='text-danger mx-2'>
+                    Ajouter Centre de transfusion
+                  </span>{' '}
                 </Link>
               </div>
 

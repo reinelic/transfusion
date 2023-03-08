@@ -20,56 +20,47 @@ const CdsList = () => {
     console.log('this is running once')
   }, [])
 
-  const increase = (e, index) => {
+  const stockMg = (e, index, opr) => {
     e.preventDefault()
+    console.log(opr)
 
-    console.log('test')
     let gname = e.target.name
+    console.log(gname)
     let newArr = [...stock]
-    const eltI = stock.findIndex((elt) => elt.id === index)
+    const eltI = stock.findIndex((elt) => elt.id == index)
 
     console.log('index')
     console.log(eltI)
 
-    newArr[eltI] = {
-      ...newArr[eltI],
-      stock: {
-        ...newArr[eltI].stock,
-        [gname]: {
-          quantite: Number(newArr[eltI].stock[gname].quantite) + 1,
+    if (opr == 'increase') {
+      newArr[eltI] = {
+        ...newArr[eltI],
+        stock: {
+          ...newArr[eltI].stock,
+          [gname]: {
+            quantite: Number(newArr[eltI].stock[gname].quantite) + 1,
+          },
         },
-      },
-    }
-    console.log(newArr)
-
-    setStock([...newArry])
-
-    setFilter([...stock])
-  }
-
-  console.log(stock)
-  const decrease = (e, index) => {
-    e.preventDefault()
-
-    console.log('test')
-    let gname = e.target.name
-    let newArr = [...stock]
-    const eltI = stock.findIndex((elt) => elt.id == index)
-
-    newArr[eltI] = {
-      ...newArr[eltI],
-      stock: {
-        ...newArr[eltI].stock,
-        [gname]: {
-          quantite: Number(newArr[eltI].stock[gname].quantite) - 1,
+      }
+    } else if (opr == 'decrease') {
+      newArr[eltI] = {
+        ...newArr[eltI],
+        stock: {
+          ...newArr[eltI].stock,
+          [gname]: {
+            quantite: Number(newArr[eltI].stock[gname].quantite) - 1,
+          },
         },
-      },
+      }
     }
+
     console.log(newArr)
 
     setStock([...newArr])
+  }
 
-    setFilter([...stock])
+  const decrease = (e, index) => {
+    e.preventDefault()
   }
 
   const getCDS = async () => {
@@ -81,16 +72,17 @@ const CdsList = () => {
       'https://api.npoint.io/0d6d5d1458f063d3fed8/stock'
     )
 
+    console.log(data)
+
     setStock(data.data)
 
     // console.log(stock)
-
-    setFilter(data.data)
   }
 
   const filter = (e) => {
     let selected = e.target.value
     console.log(selected)
+
     const filteredData = stock.filter((elt) => {
       if (selected !== 'Partout') {
         return elt.Location == selected
@@ -98,7 +90,7 @@ const CdsList = () => {
         return elt
       }
     })
-
+    console.log(filteredData)
     setFilter(filteredData)
   }
 
@@ -122,9 +114,9 @@ const CdsList = () => {
 
       <h1> Stock des dons de sang sur le territoire burundais</h1>
       {filtered.length > 0 ? (
-        filtered.map((elt, index) => (
+        stock.map((elt, index) => (
           <>
-            <Cstock info={elt} add={increase} remove={decrease}>
+            <Cstock info={elt} add={stockMg}>
               {' '}
             </Cstock>
           </>

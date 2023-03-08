@@ -55,8 +55,7 @@ const Home = () => {
 
               <div className='action_b'>
                 <Link to='/cdsList'>
-                  <span className='mr-2'> CDS jeunes</span>{' '}
-                  <Hospital size={48} />
+                  <span className='mr-2'> CNTS</span> <Hospital size={48} />
                 </Link>
               </div>
             </div>

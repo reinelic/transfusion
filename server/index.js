@@ -23,7 +23,7 @@ app.get('/test', (req, res) => {
   client.messages
     .create({
       from: process.env.TWILIO_PHONE_NUMBER,
-      body: 'hi reine , this is going well',
+      body: 'Bonjour ,ceci est un alerte',
       to: '+25776941794',
     })
     .then(() => {
