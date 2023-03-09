@@ -4,10 +4,6 @@ import { ArrowUp, ArrowDownCircle, axios } from 'react-bootstrap-icons'
 export const Cstock = ({ info, add }) => {
   const [message, setMessage] = useState([])
 
-  const isAlert = []
-
-  const sendAlert = async () => {}
-
   return (
     <>
       <div className='card mb-3'>
@@ -20,12 +16,17 @@ export const Cstock = ({ info, add }) => {
           </h5>
           <p className='card-text'></p>
           <h5>Province:{info.province} </h5>
-          <h5>
+          <div>
             {' '}
-            Nombre de poche groupe S A :{info.stock['groupe A']['quantite']}
+            Nombre de poche groupe S A :{' '}
+            <span className='text-danger font-weight-bold'>
+              {' '}
+              {info.stock['groupe A']['quantite']}{' '}
+            </span>
             <button
               onClick={(e) => add(e, info.id, 'increase')}
               name='groupe A'
+              className='mx-2'
             >
               stocker <ArrowUp></ArrowUp>
             </button>
@@ -41,13 +42,18 @@ export const Cstock = ({ info, add }) => {
                 Stock en dessous de 100 poches tres bas !!
               </p>
             )}
-          </h5>
-          <h5>
+          </div>
+          <div className='mt-2'>
             {' '}
-            Nombre de poche groupe S B :{info.stock['groupe B']['quantite']}
+            Nombre de poche groupe S B :{' '}
+            <span className='text-danger font-weight-bold'>
+              {' '}
+              {info.stock['groupe B']['quantite']}
+            </span>
             <button
               onClick={(e) => add(e, info.id, 'increase')}
               name='groupe B'
+              className='mx-2'
             >
               stocker <ArrowUp></ArrowUp>
             </button>
@@ -57,19 +63,23 @@ export const Cstock = ({ info, add }) => {
             >
               Destocker<ArrowDownCircle></ArrowDownCircle>
             </button>
-            {info.stock['groupe B']['quantite'] < 100 && (
+            {/* {info.stock['groupe B']['quantite'] < 100 && (
               <p className='text text-info'>
                 {' '}
                 Stock en dessous de 100 poches tres bas !!
               </p>
-            )}
-          </h5>
-          <h5>
+            )} */}
+          </div>
+          <div className='mt-2'>
             {' '}
-            Nombre de poche groupe S C :{info.stock['groupe C']['quantite']}
+            Nombre de poche groupe S C :{' '}
+            <span className='text-danger font-weight-bold'>
+              {info.stock['groupe C']['quantite']}{' '}
+            </span>
             <button
               onClick={(e) => add(e, info.id, 'increase')}
               name='groupe C'
+              className='mx-2'
             >
               stocker <ArrowUp></ArrowUp>
             </button>
@@ -85,7 +95,7 @@ export const Cstock = ({ info, add }) => {
                 Stock en dessous de 100 poches tres bas !!
               </p>
             )}
-          </h5>
+          </div>
         </div>
       </div>
     </>

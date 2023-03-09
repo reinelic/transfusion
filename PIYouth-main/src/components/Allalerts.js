@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { MapContainer, TileLayer, useMap, Popup, Marker } from 'react-leaflet'
+import { alert } from 'react-bootstrap-icons'
 
 export const Allalerts = () => {
   const [alerts, setAlert] = useState([])
@@ -16,8 +18,12 @@ export const Allalerts = () => {
   }
 
   return (
-    <div className='container'>
-      <table class='table table-striped'>
+    <div className='container pt-4'>
+      <h6 className='text-info font-weigth-bold'>
+        {' '}
+        <alert></alert> Les alerts en cours :
+      </h6>
+      <table class='table table-striped  '>
         <thead>
           <tr>
             <th>Hopital</th>
@@ -38,6 +44,18 @@ export const Allalerts = () => {
           })}
         </tbody>
       </table>
+
+      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+        />
+        <Marker position={[51.505, -0.09]}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      </MapContainer>
     </div>
   )
 }

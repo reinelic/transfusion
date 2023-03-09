@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
+import './Alert.css'
 
 export const Alert = () => {
   const navigate = useNavigate()
@@ -16,15 +17,15 @@ export const Alert = () => {
     console.log(data)
 
     const test = await axios.post('http://localhost:5000/alert', data)
-    navigate('/')
+    navigate('/private/alerts')
   }
 
   return (
-    <div>
+    <div className='alert-form'>
       <form onSubmit={handleSubmit(onSubmit)} className='sign-up-form'>
         <div className='mb-3'>
           <label className='form-label' htmlFor='SignInEmail'>
-            Hopital demandeur
+            Nom de l'hopital
           </label>
           <input
             className='form-control'
@@ -41,6 +42,8 @@ export const Alert = () => {
             Alerte
           </label>
           <textarea
+            rows='4'
+            cols='50'
             type='text'
             className='form-control'
             {...register('alert', {

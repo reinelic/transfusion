@@ -6,7 +6,7 @@ import { Cstock } from './Cstock'
 import axios from 'axios'
 
 const CdsList = () => {
-  const [stock, setStock] = useState()
+  const [stock, setStock] = useState([])
   const [filtered, setFilter] = useState([])
 
   const [groupea, setGroupeA] = useState(10)
@@ -52,6 +52,8 @@ const CdsList = () => {
         },
       }
     }
+
+    console.log(newArr)
 
     setStock([...newArr])
   }
@@ -115,9 +117,9 @@ const CdsList = () => {
       </div>
       <hr className='text-info font-bold'></hr>
 
-      <h1> Stock des dons de sang sur le territoire burundais</h1>
+      <h1> Stock des dons de sang sur le territoire</h1>
       {filtered.length > 0 ? (
-        filtered.map((elt, index) => (
+        stock.map((elt, index) => (
           <>
             <Cstock info={elt} add={stockMg}>
               {' '}
