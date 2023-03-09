@@ -13,6 +13,8 @@ import { BrowserRouter } from 'react-router-dom'
 import { UserContextProvider } from './context/userContext'
 import './App.css'
 import { AddCds } from './components/AddCds'
+import { Alert } from './components/Alert'
+import { Allalerts } from './components/Allalerts'
 
 function App() {
   return (
@@ -36,7 +38,8 @@ function App() {
           <Route path='/private' element={<Private />}>
             <Route path='/private/private-home' element={<PrivateHome />} />
             <Route path='cdsList' element={<CdsList />}></Route>
-            <Route path='newCDS' element={<AddCds />}></Route>
+            <Route path='alerts' element={<Allalerts />}></Route>
+            <Route path='Alert' element={<Alert />}></Route>
           </Route>
         </Routes>
 

@@ -71,11 +71,15 @@ const Navbar = () => {
               </div>
 
               <div className='nav-item'>
-                <Link to='private/newCDS'>
+                <Link to='private/alerts'>
                   {' '}
-                  <span className='text-danger mx-2'>
-                    Ajouter Centre de transfusion
-                  </span>{' '}
+                  <span className='text-danger mx-2'>Urgence</span>{' '}
+                </Link>
+              </div>
+              <div className='nav-item'>
+                <Link to='private/Alert'>
+                  {' '}
+                  <span className='text-danger mx-2'>Alert</span>{' '}
                 </Link>
               </div>
 

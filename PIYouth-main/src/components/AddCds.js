@@ -1,5 +1,11 @@
 import React from 'react'
 
 export const AddCds = () => {
-  return <div>AddCds</div>
+  return <>
+  <form action="">
+
+
+    
+  </form>
+  </>
 }

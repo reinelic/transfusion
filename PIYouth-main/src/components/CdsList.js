@@ -6,9 +6,8 @@ import { Cstock } from './Cstock'
 import axios from 'axios'
 
 const CdsList = () => {
-  const [filtered, setFilter] = useState([])
-
   const [stock, setStock] = useState()
+  const [filtered, setFilter] = useState([])
 
   const [groupea, setGroupeA] = useState(10)
   const [groupeb, setGroupeB] = useState(200)
@@ -54,8 +53,6 @@ const CdsList = () => {
       }
     }
 
-    console.log(newArr)
-
     setStock([...newArr])
   }
 
@@ -72,9 +69,9 @@ const CdsList = () => {
       'https://api.npoint.io/0d6d5d1458f063d3fed8/stock'
     )
 
-    console.log(data)
-
     setStock(data.data)
+
+    setFilter([...data.data])
 
     // console.log(stock)
   }
@@ -82,18 +79,24 @@ const CdsList = () => {
   const filter = (e) => {
     let selected = e.target.value
     console.log(selected)
+    console.log(stock)
 
     const filteredData = stock.filter((elt) => {
       if (selected !== 'Partout') {
-        return elt.Location == selected
+        return elt.province == selected
       } else {
         return elt
       }
     })
-    console.log(filteredData)
     setFilter(filteredData)
   }
+  console.log('filtered')
 
+  console.log(filtered)
+
+  console.log('Stock')
+
+  console.log(stock)
   return (
     <div className='container  mt-2 '>
       <div className='filtre'>
@@ -114,7 +117,7 @@ const CdsList = () => {
 
       <h1> Stock des dons de sang sur le territoire burundais</h1>
       {filtered.length > 0 ? (
-        stock.map((elt, index) => (
+        filtered.map((elt, index) => (
           <>
             <Cstock info={elt} add={stockMg}>
               {' '}
